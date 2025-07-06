@@ -1,0 +1,112 @@
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bot Aviator</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #000 url('background.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .container {
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: 30px;
+      border-radius: 15px;
+      text-align: center;
+      width: 90%;
+      max-width: 400px;
+    }
+
+    h1 {
+      font-size: 24px;
+    }
+
+    .button {
+      display: block;
+      margin: 10px auto;
+      padding: 15px;
+      width: 100%;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      color: white;
+    }
+
+    .whatsapp {
+      background-color: #25D366;
+    }
+
+    .bot {
+      background-color: #007bff;
+    }
+
+    .link-button {
+      background-color: #222;
+    }
+
+    .link-button:hover {
+      background-color: #333;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container" id="step1">
+    <h1>🤖 Antes de avançar...</h1>
+    <p>Entre no nosso grupo de WhatsApp para receber dicas exclusivas de como ganhar no Aviator!</p>
+    <a href="https://whatsapp.com/channel/0029Vb5qcXa9mrGjHiNmku21" target="_blank">
+      <button class="button whatsapp">✅ Entrar no Grupo</button>
+    </a>
+
+    <p>📤 Compartilhe com seus amigos para liberar o Bot!</p>
+    <a href="https://wa.me/?text=🚀 Dica para ganhar no Aviator aqui: https://aviator.replit.app" target="_blank" onclick="liberarBot()">
+      <button class="button link-button">📲 Compartilhar no WhatsApp</button>
+    </a>
+
+    <button class="button bot hidden" id="botBtn" onclick="showBot()">➡️ Avançar para o Bot</button>
+
+    <p style="color: #ffcc00;">⚠️ É obrigatório entrar no grupo e compartilhar para continuar</p>
+  </div>
+
+  <div class="container hidden" id="step2">
+    <h1>🤖 Bot Aviator</h1>
+    <p>Selecione uma das opções abaixo:</p>
+    <a href="https://abre.ai/mVpq" target="_blank">
+      <button class="button link-button">🎯 Dica 1 - Como ganhar</button>
+    </a>
+    <a href="https://record.elephantbet.com/_6jTSK-WgMZgWqcfzuvZcQGNd7ZgqdRLk/1/" target="_blank">
+      <button class="button link-button">🤑 Registar-se na ElephantBet</button>
+    </a>
+    <a href="https://whatsapp.com/channel/0029Vb5qcXa9mrGjHiNmku21" target="_blank">
+      <button class="button whatsapp">✅ Voltar ao Grupo</button>
+    </a>
+  </div>
+
+  <script>
+    function liberarBot() {
+      setTimeout(() => {
+        document.getElementById('botBtn').classList.remove('hidden');
+      }, 1000);
+    }
+
+    function showBot() {
+      document.getElementById('step1').classList.add('hidden');
+      document.getElementById('step2').classList.remove('hidden');
+    }
+  </script>
+</body>
+</html>
